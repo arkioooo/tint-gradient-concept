@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>TINT | Create Account</title>
+
+<style>
+
+body {
+  background-image: url("img/background.png");
+  background-repeat: repeat;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #091d23;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-width: 2px;
+  background-color: #ffd9a0;
+  color: #091d23;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+}
+.custom-select {
+  position: relative;
+   width: 100%;
+  padding: 12px;
+  border: 1px solid #091d23;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-width: 2px;
+  background-color: #ffd9a0;
+  color: #091d23;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: #ffd9a0;
+  color: #091d23;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 28px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 20px;
+  right: 10px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 10px 17px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #091d23;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 3px;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: #ffb441;
+  color: #091d23;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-content {
+  background-color: #091d23;
+  padding: 30px;
+  text-align: center;
+  color: #ffb441;
+}
+
+.overlay button {
+  border: 2px solid #091d23;
+  padding: 5px;
+  width: 30%;
+  color: #091d23;
+  background-color: #ffb441;
+  transition: 0.3s ease-in-out;
+  font-size: 15px;
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none;
+}
+
+.overlay h2{
+  font-size: 22px;
+}
+.overlay button:hover{
+  background-color: #091d23;
+  color: #ffb441;
+  cursor: pointer;
+  border: 2px solid #ffb441;
+    background-image: linear-gradient(45deg, #091d23, #0e2e37, #040c0f);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+}
+	</style>
+</head>
+<body>
+	<header>
+		<a class="cd-logo" href="#0"><img src="img/cd-logo.svg" alt="SORRY! A PROBLEM OCCURED WHILE UPLOADING THE CONTENT"></a>
+	</header>
+
+	<nav>
+		<ul class="cd-primary-nav">
+      <br><br><br><br><br>
+			<li><a href="index.html">home</a></li>
+			<li><a href="blogs.html">blogs</a></li>
+			<li><a href="contact.html">contact</a></li>
+			<li><a class="active" href="account.html">Sign Up</a></li>
+		</ul>
+	</nav>
+
+	<main class="cd-content">
+		<div class="cd-intro">
+            <div class="hero-image">
+            <div class="hero-text">
+			<h1>TINT<br><br><span style="font-size: 25px;">Become a Member!</span></h1></div></div>
+		</div><br><br><br><br><br>
+		<hr align="left" width="50%" color="#091d23">
+		<p>
+			<form action="/action_page.php">
+    <label for="fname">Your Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<label for="lname">Email ID</label>
+    <input type="text" id="email" name="emailid" placeholder="Your Email ID..">
+    <label for="lname">Password</label>
+    <input type="text" id="email" name="emailid" placeholder="Your Password..">
+    <label for="lname">Confirm Password</label>
+    <input type="text" id="email" name="emailid" placeholder="Your Password..">
+
+    <div class="custom-select">
+  <select>
+    <option value="0">Select continent:</option>
+    <option value="1">Asia</option>
+    <option value="2">North America</option>
+    <option value="3">South America</option>
+    <option value="4">Europe</option>
+    <option value="5">Africa</option>
+    <option value="6">Australasia</option>
+    <option value="7">Antartica</option>
+  </select>
+</div>
+    <br>
+    <a href="#"><button class="btn" onclick="showOverlay()">Submit</button></a>
+      </form>
+
+
+<div class="overlay" id="overlay">
+  <div class="overlay-content">
+    <h2>Your account details have been updated!</h2>
+    <p>Please check your e-mail for conformation, keep in mind it can take some time!</p><br>
+    <button onclick="hideOverlay()">Close</button>
+  </div>
+</div>
+		
+		<hr align="right" width="50%" color="#091d23">
+	</main> <!-- cd-content -->
+<!--DON'T REMOVE-->
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div> <!-- cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div> <!-- cd-overlay-content -->
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	<div class="cd-footer"><span style="font-weight: bold;">&copy; All Rights Reserved. Mridul Sharma, 2019.</span><br><br>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-google"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-pinterest"></a>
+	</div>
+
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+  
+window.addEventListener('scroll', function() {
+  var hero = document.querySelector('.hero-image');
+  var scrollPosition = window.scrollY;
+  var scrollThreshold = window.innerHeight * 0.3; // 50% of the page height
+
+  if (scrollPosition > scrollThreshold) {
+    hero.classList.add('sticky');
+  } else {
+    hero.classList.remove('sticky');
+  }
+});
+</script>
+<script type="text/javascript">
+  
+function showOverlay() {
+  var overlay = document.getElementById('overlay');
+  overlay.style.display = 'flex';
+}
+
+function hideOverlay() {
+  var overlay = document.getElementById('overlay');
+  overlay.style.display = 'none';
+}
+
+</script>
+
+<script type="text/javascript">
+  
+var clickCount = 0;
+
+document.addEventListener('click', function() {
+  clickCount++;
+
+  var hero = document.querySelector('.hero-image  ');
+  if (clickCount % 2 === 1) {
+    hero.classList.add('hidden');
+  } else {
+    hero.classList.remove('hidden');
+  }
+});
+
+</script>
+
+<script>
+var x, i, j, selElmnt, a, b, c;
+/*look for any elements with the class "custom-select":*/
+x = document.getElementsByClassName("custom-select");
+for (i = 0; i < x.length; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < selElmnt.length; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, s, h;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < s.length; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            for (k = 0; k < y.length; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+function closeAllSelect(elmnt) {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  var x, y, i, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  for (i = 0; i < y.length; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < x.length; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+/*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+document.addEventListener("click", closeAllSelect);
+</script>
+</body>
+</html>

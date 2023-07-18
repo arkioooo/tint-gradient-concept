@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Poppins&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/reset.css"> 
+	<link rel="stylesheet" href="css/style.css"> 
+	<script src="js/modernizr.js"></script>
+  	
+	<title>TINT | Home</title>
+</head>
+<style>
+body {
+  background-image: url("img/background.png");
+  background-repeat: repeat;
+}
+.modal-overlay {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 25px;
+  text-align: right;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.modal-content h1{
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.modal-content p{
+	padding-bottom: 10px;
+}
+#accept-cookies {
+  cursor: pointer;
+  border: 2px solid #091d23;
+  padding: 8px;
+  width: 40%;
+  color: #091d23;
+  background-color: #ffd9a0;
+  transition: 0.3s ease-in-out;
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none;
+}
+#accept-cookies:hover{
+  background-color: #091d23;
+  color: #ffb441;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, #091d23, #0e2e37, #040c0f);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+</style>
+<body>
+	<header>
+		<a class="cd-logo" href="#0"><img src="img/cd-logo.svg" alt="SORRY! A PROBLEM OCCURED WHILE UPLOADING THE CONTENT"></a>
+	</header>
+
+	<nav>
+		<ul class="cd-primary-nav">
+			<br><br><br><br><br>
+			<li><a class="active" href="index.html">home</a></li>
+			<li><a href="blogs.html">blogs</a></li>
+			<li><a href="contact.html">contact</a></li>
+			<li><a href="account.html">Sign Up</a></li>
+		</ul>
+	</nav>
+
+	<main class="cd-content">
+		<div class="cd-intro">
+				<div class="hero-image">
+  					<div class="hero-text">
+			<h1>TINT<br><span style="font-size: 25px;">Your Science Daily</span></h1><br>
+					</div>
+				</div>
+		</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr align="left" width="50%" color="#091d23">
+		<br>
+		<p>
+			There's a saying:<br><span style="font-size: 30px;">"Yesterday's history, tommorow's mystery but today is a gift" </span><br>(That's why it's also called <b>'present'</b>!)
+			<br><br>
+			So, what was the last time you used science for your work? No answer. But it isn't a difficult question, is it? Well we use science everyday, every hour, every minute, and we will keep on using it for the coming eons. There's no doubt that science won't be forgotten soon. But science is boring, isn't it? All those numericals and theories are too much confusing, right? But I made this website for you to see science from a different perspective, and not at all complex and labyrinthine. It's time for you to become a scientist yourself, without actually reading science. <br> <br>
+			Every blog website is set up with high hopes of striking millions of views for each page and extracting maximum by investing mimimum. But this site dosen't work that way. It's motive is simple - everyone should be aware of nearby lurking dangers and not invest too much internet on uploading pages. Moreover, there is no rocket science mentioned in our blogs. So you just need to sit on your comfy couch, visit Tint wesite and read and read. The plus point is that the blogs are written in super-easy language for everyone to comprehend. We won't ask for donations or necessary logins or signups. Just visit our website.
+
+What are you waiting for? Choose a topic and start reading!
+		</p>
+		<hr align="right" width="50%" color="#091d23">
+	</main> 
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div> 
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div> 
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	<div class="cd-footer"><span style="font-weight: bold;">&copy; All Rights Reserved. Mridul Sharma, 2019.</span><br><br>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-google"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-pinterest"></a>
+	</div>
+
+<div id="cookie-popup" class="modal-overlay">
+  <div class="modal-content">
+    <h1>Cookie Policy</h1>
+    <p>This website uses cookies to ensure you get the best experience. Click twice on Accept to continue</p>
+    <button id="accept-cookies">Accept</button>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  var cookiePopup = document.getElementById("cookie-popup");
+  var acceptButton = document.getElementById("accept-cookies");
+  var acceptCount = 0;
+
+  acceptButton.addEventListener("click", function() {
+    acceptCount++;
+    if (acceptCount === 2) {
+      cookiePopup.style.display = "none";
+      // Set a cookie to remember acceptance
+      document.cookie = "cookieAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    }
+  });
+
+  // Check if the cookie is already set
+  var cookieAccepted = document.cookie.match(/(^|;) ?cookieAccepted=([^;]*)(;|$)/);
+  if (!cookieAccepted) {
+    cookiePopup.style.display = "block";
+  }
+});
+
+</script>
+<script type="text/javascript">
+	
+window.addEventListener('scroll', function() {
+  var hero = document.querySelector('.hero-image');
+  var scrollPosition = window.scrollY;
+  var scrollThreshold = window.innerHeight * 0.3; // 50% of the page height
+
+  if (scrollPosition > scrollThreshold) {
+    hero.classList.add('sticky');
+  } else {
+    hero.classList.remove('sticky');
+  }
+});
+</script>
+
+<script type="text/javascript">
+	
+var clickCount = 0;
+
+document.addEventListener('click', function() {
+  clickCount++;
+
+  var hero = document.querySelector('.hero-image');
+  if (clickCount % 2 === 1) {
+    hero.classList.add('hidden');
+  } else {
+    hero.classList.remove('hidden');
+  }
+});
+
+</script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
